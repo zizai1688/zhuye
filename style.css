@@ -1,0 +1,134 @@
+body, html { margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; }
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    background: url('背景1.jpg') center center no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44, 62, 80, 0.45);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 80px; /* 防止内容被固定nav遮挡，可根据nav高度调整 */
+}
+.hero-content h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+}
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.hero-content .btn {
+    padding: 12px 36px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 24px;
+    background: #fff;
+    color: #2d3e50;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.hero-content .btn:hover {
+    background: #2d3e50;
+    color: #fff;
+}
+nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: rgba(44, 62, 80, 0.45);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 48px;
+    z-index: 3;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+.logo span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.menu {
+    display: flex;
+    gap: 28px;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 18px;
+    transition: background 0.2s;
+}
+.menu a:hover, .menu .active {
+    background: rgba(255,255,255,0.18);
+}
+.menu a:last-child {
+    margin-right: 20px;
+    margin-left: 50px;
+}
+.signup-btn {
+    border: 1.5px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 22px;
+    font-size: 1rem;
+    margin-left: 18px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.signup-btn:hover {
+    background: #fff;
+    color: #2d3e50;
+}
+.intro {
+    background: #fff;
+    text-align: center;
+    padding: 48px 16px 32px 16px;
+}
+.intro h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #2d3e50;
+}
+.intro p {
+    color: #444;
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+@media (max-width: 700px) {
+    nav { padding: 10px 10px; }
+    .hero-content h1 { font-size: 1.5rem; }
+    .intro { padding: 28px 4px 18px 4px; }
+} 
