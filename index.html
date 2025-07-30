@@ -2,39 +2,35 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自在首页</title>
-    <link rel="stylesheet" href="style.css">
+    <title>预约卡</title>
+    <link rel="stylesheet" href="预约卡.css">
 </head>
 <body>
-    <canvas id="fireworks-canvas" style="position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:999;"></canvas>
-    <div class="hero">
-        <div class="overlay"></div>
-        <nav>
-            <div class="logo">
-                <img src="logo1.jpg" alt="LOGO">
-                <span>奔腾团队</span>
+    <div class="warp">
+        <div class="warp-checkbox">
+            <input type="checkbox" id="topCheck"><label for="topCheck">预约信息</label>
+        </div>
+        <div class="card">
+            <div class="card-glow-border" id="cardGlowBorder">
+                <svg class="glow-svg" width="100%" height="100%" viewBox="0 0 608 408" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4" width="600" height="400" rx="16" stroke="#FFD700" stroke-width="4" fill="none"/>
+                    <rect class="glow-rect" x="4" y="4" width="600" height="400" rx="16" stroke="#FFD700" stroke-width="6" fill="none"/>
+                </svg>
             </div>
-            <div class="menu">
-                <a href="#" class="active">首页</a>
-                <a href="https://zizai1688.github.io/yuyueka/index.html">预约图</a>
-                <a href="#">同城匹配图</a>
-                <a href="#">套餐图</a>
-                <a href="#">微信</a>
-                <a href="#">支付宝</a>
-                <a href="#" id="cheer-btn">加油</a>
+            <h1>VIP会员<span class="status">未认证</span></h1>
+            <div class="form-frame">
+                <div class="info-row"><span class="label">持卡人</span><span class="divider"></span><input class="input" type="text" placeholder="输入账号"></div>
+                <div class="info-row"><span class="label">会员年龄</span><span class="divider"></span><input class="input" type="text" placeholder="输入年龄"></div>
+                <div class="info-row"><span class="label">预约单号</span><span class="divider"></span><input class="input" type="text" placeholder="输入单号"></div>
+                <div class="info-row"><span class="label">预约地址</span><span class="divider"></span><input class="input" type="text" placeholder="输入地址"></div>
             </div>
-        </nav>
-        <div class="hero-content">
-            
+        </div>
+        <div class="warp-logos">
+            <img src="photo_2025-07-30_17-54-30.jpg" class="warp-logo" alt="photo_2025-07-30_17-54-30" />
+            <img src="photo_2025-07-30_17-54-25.jpg" class="warp-logo" alt="photo_2025-07-30_17-54-25" />
         </div>
     </div>
-    <div class="intro">
-        <h2>奔腾 奔腾 万马奔腾</h2>
-        <p>
-            加油！你可以的！、"别放弃，再坚持一下！、"相信自己，你很棒！、"一切都会好起来的，加油！、 "向前冲，未来可期！
-        </p>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="预约卡.js"></script>
 </body>
-</html>
-<script src="main.js"></script> 
+</html> 
