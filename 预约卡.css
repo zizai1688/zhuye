@@ -1,0 +1,187 @@
+/* warp 样式 */
+.warp {
+    width: 1800px;
+    height: 800px;
+    box-sizing: border-box;
+    margin: 40px auto;
+    background-image: url('预约图.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.warp-checkbox {
+    position: absolute;
+    top: 74px;
+    left: calc(50% - 400px);
+    transform: translateX(0);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    user-select: none;
+    color: #fff;
+}
+.warp-checkbox input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+.card {
+    width: 600px;
+    height: 400px;
+    background: rgba(128,128,128,0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+    overflow: visible;
+}
+.card-glow-border {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    z-index: 20;
+}
+.glow-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.glow-rect {
+    stroke: #FFD700;
+    stroke-width: 6;
+    filter: drop-shadow(0 0 16px #FFD700) drop-shadow(0 0 32px #FFD700);
+    stroke-dasharray: 200 1200;
+    stroke-dashoffset: 0;
+    animation: border-glow-move 2s linear infinite;
+}
+@keyframes border-glow-move {
+    0% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -1400; }
+}
+.card-glow-border.hide {
+    display: none;
+}
+.card h1 {
+    font-size: 3.6rem;
+    margin-bottom: 32px;
+    color: #FFD700;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: -30px;
+}
+.card h1.glow {
+    text-shadow: 0 0 16px #FFD700, 0 0 32px #FFD700, 0 0 8px #fff;
+}
+.card .status {
+    font-size: 1.1rem;
+    color: #f44336;
+    background: none;
+    border-radius: 8px;
+    padding: 4px 16px;
+    margin-left: 18px;
+    position: relative;
+    top: 30px;
+}
+.card .status.glow {
+    text-shadow: 0 0 12px #f44336, 0 0 24px #f44336, 0 0 6px #fff;
+}
+.form-frame {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.3rem;
+    height: 52px;
+}
+.label {
+    width: 160px;
+    font-size: 2.4rem;
+    color: #FFD700;
+    text-align: right;
+    font-weight: 900;
+    height: 52px;
+    line-height: 52px;
+}
+.divider {
+    flex: 0 0 1px;
+    height: 28px;
+    background: #bbb;
+    margin: 0 18px;
+}
+.input {
+    flex: 1;
+    height: 32px;
+    line-height: normal;
+    vertical-align: bottom;
+    padding-top: 10px;
+    padding-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: #fff;
+    outline: none;
+    max-width: 320px;
+    text-align: center;
+}
+.input:focus {
+    border-color: #888;
+}
+.input::placeholder {
+    text-align: center;
+    font-size: 1.4rem;
+}
+.warp-logos {
+    position: absolute;
+    right: 82px;
+    bottom: 32px;
+    display: flex;
+    gap: 18px;
+    z-index: 2;
+}
+.warp-logo {
+    height: 3.6rem;
+    width: auto;
+    display: block;
+}
+.camera-logo {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 10;
+}
+.camera-logo:hover {
+    transform: translateX(-50%) scale(1.12);
+}
